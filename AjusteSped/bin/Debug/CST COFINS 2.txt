@@ -1,0 +1,4 @@
+update Movimento_Produto 
+set COFINS_CST = @novo
+where Tipo = 'E' and COFINS_CST = @atual
+and cast(Data_Lancamento as date) between @inicial and @final

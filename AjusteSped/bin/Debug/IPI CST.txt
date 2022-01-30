@@ -1,0 +1,4 @@
+update Movimento_Produto 
+set IPI_CST = @novo 
+where Tipo = 'E' and IPI_CST = @atual
+and cast(Data_Lancamento as date) between @inicial and @final
